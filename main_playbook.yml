@@ -1,0 +1,10 @@
+---
+- name: Create file and get disto name
+  hosts: all
+  become: yes
+  gather_facts: false
+ 
+  roles: 
+  - create_file
+  - get_distro_name
+

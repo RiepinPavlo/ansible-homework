@@ -1,0 +1,9 @@
+---
+- name: Get distro name
+  shell: lsb_release
+  register: distro   
+  
+- name: Print hostname and disto name  
+  debug: 
+   msg:  Hostname "{{inventory_hostname }}"  Distro "{{ lookup('file', '/etc/issue') }}"
+ 
